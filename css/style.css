@@ -9,11 +9,53 @@
 }
 
 ol,
-ul {
-    list-style: none;
+ul, li {
+	display: block;
+	padding: 0;
+	list-style: none;
 }
 
 a {
     text-decoration: none;
 }
 /* Reset END */
+/*temp styles*/
+body{
+	background: grey;
+}
+/*end temp styles*/
+.mobile__menu {
+	display: none;
+}
+/* my styles */
+.page-header{
+	margin: 0 6%;
+}
+.page-header-wrapper{
+	    height: 126px; /*can change to margin top*/
+display: flex;
+    align-items: center;
+    justify-content: space-between; /*need change*/
+}
+.menu__list{
+	    display: flex;
+    justify-content: space-between;
+}
+.menu > ul li a{
+	display: block;
+	text-decoration: none;
+	padding: 15px 27px;
+	color: #2d3950;
+	font-weight: bold;
+}
+.social-icons> ul li a{
+	display: block;
+	text-decoration: none;
+	padding: 15px 27px;
+	color: #2d3950;
+	font-weight: bold;
+}
+.social-icons> ul{
+	 display: flex;
+    justify-content: space-between; /*change class and add ul class*/
+}
