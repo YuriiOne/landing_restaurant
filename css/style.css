@@ -28,10 +28,10 @@ body{
 	display: none;
 }
 /* my styles */
-.page-header{
+.page-top-header{
 	margin: 0 6%;
 }
-.page-header-wrapper{
+.page-top-header__wrapper{
 	    height: 126px; /*can change to margin top*/
 display: flex;
     align-items: center;
