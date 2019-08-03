@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap');
 /* Reset Styles */
 * {
     margin: 0;
@@ -28,43 +30,61 @@ section{
 }
 body{
 	background: grey;
-	margin: 0 10%;
+	font-size: 16px;
+    font-family: "Yeseva One", serif;
+	font-weight: 400;
 
 }
 
 /*end temp styles*/
-.mobile__menu {
+.mobile__nav-menu {
 	display: none;
 }
 /* my styles */
-.page-top-header{
-	margin: 0 6%;
+/******header  *****/
+
+.page-header{
+	background: url(../img/header-bg.png);
+	background-size: cover;
 }
-.page-top-header__wrapper{
-	    height: 126px; /*can change to margin top*/
-display: flex;
+.page-header__wrapper{
+	height: 159px; /*can change to margin top*/
+	display: flex;
     align-items: center;
     justify-content: space-between; /*need change*/
+    background: url(../img/nav-bg.png);
+    margin: 0 5%;
+
 }
-.menu__list{
-	    display: flex;
+.nav-menu__list{
+	font-family: 'Gentium Book Basic', serif;
+	display: flex;
     justify-content: space-between;
 }
-.menu > ul li a{
-	display: block;
+.nav-menu > ul li a{
 	text-decoration: none;
 	padding: 15px 27px;
-	color: #2d3950;
-	font-weight: bold;
+	color: #ffffff;
 }
 .social-icons> ul li a{
-	display: block;
 	text-decoration: none;
 	padding: 15px 27px;
-	color: #2d3950;
-	font-weight: bold;
+	color: #ffffff;
 }
 .social-icons> ul{
 	 display: flex;
     justify-content: space-between; /*change class and add ul class*/
+}
+
+/*main-header__wrapper*/
+.main-header__wrapper{
+	color: #fff;
+	text-align: center;
+	padding: 50px 0;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-header__wrapper .h1{
+	font-size: 90px;
 }
