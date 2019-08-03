@@ -20,9 +20,18 @@ a {
 }
 /* Reset END */
 /*temp styles*/
+html{
+	scroll-behavior: smooth;
+}
+section{
+	border-top:2px solid red;
+}
 body{
 	background: grey;
+	margin: 0 10%;
+
 }
+
 /*end temp styles*/
 .mobile__menu {
 	display: none;
