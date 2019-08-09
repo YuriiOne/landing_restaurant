@@ -29,9 +29,6 @@ p{
 html{
 	scroll-behavior: smooth;
 }
-section, footer{
-	border-top:2px solid red;
-}
 body{
 	font-size: 16px;
 	font-family: "Yeseva One", serif;
@@ -47,6 +44,9 @@ body{
 	display: none;
 }
 /*dop styles*/
+.flex{
+	display: flex;
+}
 .divider-image,
 .heading {
 	text-align: center;
@@ -60,8 +60,14 @@ body{
 .mt60{
 	margin-top: 60px;
 }
-.text-description{
-	font-family: 'Lato', sans-serif;
+.mt75{
+	margin-top: 75px;
+}
+.mr30{
+	margin-right: 30px;
+}
+.ml50px{
+	margin-left: 50px;
 }
 .heading{
 	color: #cc9900;
@@ -90,10 +96,10 @@ body{
 	height: 159px; /*can change to margin top*/
 	display: flex;
     align-items: center;
-    justify-content: space-between; /*need change*/
+    justify-content: space-around; /*need change*/
     background: url(../img/nav-bg.png);
     padding: 0 5%;
-
+    flex-wrap: wrap;
 }
 li a {
 	color: #fff;
@@ -101,24 +107,31 @@ li a {
 .nav-menu__list{
 	font-family: 'Gentium Book Basic', serif;
 	display: flex;
-    justify-content: space-between;
+	align-items: center;
+    justify-content: center;
     font-size: 21px;
 }
 .nav-menu > ul li a{
 	text-decoration: none;
-	padding: 15px 27px;
+	margin: 30px;
 	color: #ffffff;
 }
 .social-icons> ul li a{
 	text-decoration: none;
-	padding: 10px;
 	color: #dab33e;
 }
 .top-header__social-icons li{
 	display: inline-block;
 }
-
-
+.top-header__social-icons{
+	display: flex;
+    justify-content: flex-start;
+    -ms-align-items: center;
+    align-items: center;
+}
+.nav-menu.top-header__nav-menu{
+	margin-right: 50px;
+}
 /*main-header__wrapper*/
 .main-header__wrapper{
 	color: #fff;
@@ -139,34 +152,19 @@ li a {
 }
 
 .btn {
-	min-width: 228px;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 17px 25px;
-    font-size: 18px;
-    margin: 0 10px;
-    color: #ffffff;
-    transition: 0.3s;
-    border: 1px solid #000000;
-	background-color: #000000;
-	opacity: 0.8;
-}
-.btn {
     padding: 0 30px;
     height: 48px;
     line-height: 46px;
     text-transform: uppercase;
-    font-size: 14px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-    font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
+    min-width: 228px;
+    margin: 0 10px;
+    border: 1px solid #000000;
+    opacity: 0.8;
 }
-.btn:hover {
-	border: 1px solid #ffffff;
-	opacity: 0.7;
-	background: transparent;
-}
+
 .btn-outline-white {
     color: #fff;
     border-color: #fff;
@@ -177,6 +175,16 @@ li a {
     border-color: #212121;
     background-color: #212121;
 }
+.btn-outline-white:hover {
+    color: #fff;
+    border-color: #212121;
+    background-color: #212121;
+}
+.btn-dark:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
 /***start  section-about**/
 .section-about{
 	box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
@@ -186,14 +194,11 @@ li a {
     padding: 55px 0;
 }
 
-.about-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .about_image-dish .dish-img{
 	width: 100%;
+}
+.about__text{
+	color: #4c4c4c;
 }
 
 /******Fine ingredients *******/
@@ -217,6 +222,7 @@ li a {
 }
 .ingredients__text{
 	margin-bottom: 38px;
+	font-family: 'Lato', sans-serif;
 }
 .ingredients__list .ingredients__list-item:before {
   content: '✓';
@@ -234,6 +240,13 @@ li.ingredients__list-item {
     justify-content: space-between;
     border-bottom: 1px solid #fbf7c0;
     color: #c89f2d;
+    padding-bottom: 5px;
+    font-size: 21px;
+}
+.text-description{
+	font-family: 'Lato', sans-serif;
+	margin: 5px 0 35px 0;
+	color: #4c4c4c;
 }
 /****** section-reviews *******/
 .section-reviews{
@@ -255,7 +268,16 @@ li.ingredients__list-item {
 	font-weight: 300;
 	line-height: 45px;
 	font-size: 25px;
-	padding: 0 60px 40px 60px;
+	padding: 0 74px 30px 74px;
+	position: relative;
+}
+.section-reviews__quote span{
+	font-size: 96px;
+    font-family: Georgia;
+    padding-top: -6px;
+    position: absolute;
+    left: 40px;
+    top: 5px;
 }
 .section-reviews__cite{
 	color: #ffffff;
@@ -266,8 +288,65 @@ li.ingredients__list-item {
 }
 
 /*******section Reservations********/
-
-
+.section-reservation{
+	background: url(../img/reservation_bg.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.reservation__dish-images{
+	margin: 100px 0;
+	margin-left: -30px;
+}
+.reservation-block__title{
+	padding-bottom: 5px;
+}
+.reservation-description{
+	font-family: 'Lato', sans-serif;
+    margin: 10px;
+    color: #4c4c4c;
+}
+.reservation-block__divider.divider-image{
+	margin-bottom: 30px;
+}
+.reservation-block__form label{
+	font-family: "Open Sans";
+	color: #c9a131;
+	font-size: 14px;
+	font-weight: 700;
+    margin-top: 27px;
+    margin-bottom: 0;
+    text-align: left;
+    display: block;
+}
+.reservation-block__form .form-control {
+    width: 100%;
+    height: 36px;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-style: italic;
+    font-family: "Open Sans";
+    color: #7c7c7c;
+    background-color: #fff;
+	border: 1px solid #c8c6c6;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.reservation-block__form .form-control:hover,
+.reservation-block__form .form-control:focus{
+	border: 1px solid #c89f2d;
+}
+.submit-btn {
+    border: 1px solid #c89f2d;
+    background-color: #c89f2d;
+    color: #ffffff;
+    font-size: 16px;
+    width: 200px;
+    font-family: "Open Sans";
+    margin-top: 33px;
+    margin-bottom: 30px;
+    padding: 6px;
+}
 /******* footer********/
 .footer{
 	background-color: #191919;
@@ -275,9 +354,8 @@ li.ingredients__list-item {
 	padding-bottom: 60px;
 }
 .footer__title{
-	/* Style for "Opening Ho" */
-color: #fefefe;
-font-size: 21px;
+	color: #fefefe;
+	font-size: 21px;
 }
 .footer__text{
     font-family: "Open Sans", serif;
