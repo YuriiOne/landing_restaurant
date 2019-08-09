@@ -18,7 +18,7 @@
 				<div class="logo page-header__logo">
 					<img src="img/logo-lambda.png" alt="Logo" class="page-header__image">
 				</div>
-				<nav class="nav-menu top-header__nav-menu">
+				<nav class="nav-menu top-header__nav-menu flex">
 					<ul class="nav-menu__list">
 						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Home</a></li>
 						<li class="nav-menu__item"><a href="#about" class="nav-menu__link">About</a></li>
@@ -27,14 +27,15 @@
 						<li class="nav-menu__item"><a href="#reviews" class="nav-menu__link">Reiews</a></li>
 						<li class="nav-menu__item"><a href="#reservations" class="nav-menu__link">Reservations</a></li>
 					</ul>
+					<div class="top-header__social-icons social-icons">
+						<ul class="list-unstyled social">
+							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-youtube"></span></a></li>
+							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+						</ul>
+					</div>
 				</nav>
-				<div class="top-header__social-icons social-icons">
-					<ul class="list-unstyled social">
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-youtube"></span></a></li>
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-					</ul>
-				</div>
+				
 				<nav class="nav-menu mobile__nav-menu">
 					<input type="checkbox" name="toggle" id="mob-menu" class="toggleMenu">
 					<label for="nav-menu" class="toggleMenu"><i class="fa fa-bars"></i></label>
@@ -54,8 +55,8 @@
 						<h1 class="h1">the right ingredients <br>for the right food</h1>
 						<div class="divider-image"><img src="img/decoration_divider.png" alt="Decoration"></div>
 						<p class="text-center mt-30">
-							<a href="#" class="btn btn-outline-white btn-default">BOOK A TABLE</a>
-							<a href="#" class="btn btn-dark btn-default">SEE THE MENU</a>
+							<a href="#" class="btn btn-dark" id="">BOOK A TABLE</a>
+							<a href="#" class="btn btn-outline-white" id="">SEE THE MENU</a>
 						</p>
 					</div>
 				</div>
@@ -83,14 +84,14 @@
 			</div>
 		</section>
 		<!-- end section About -->
-		<!-- Start section About -->
+		<!-- Start section ingredients -->
 		<section class="section-ingredients text-center" id="ingredients">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-lg-push-5 section-ingredients__wrapper">
+					<div class="col-lg-6 col-lg-push-6 section-ingredients__wrapper">
 						<h3 class="ingredients__title heading-white">Fine ingredients</h3>
 						<div class="ingredients__divider divider-image"><img src="img/white-divider.png" alt="Decoration"></div>
-						<div class="ingredients__text text-description">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+						<div class="ingredients__text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
 						</div>
 						<div class="col-lg-8 col-lg-push-2">
 							<ul class="ingredients__list text-left">
@@ -201,7 +202,7 @@
 					<div class="section-reviews__wrapper col-md-8 col-md-push-2">
 						<h3 class="heading-white">Guest Reviews</h3>
 						<div class="reviews__divider divider-image"><img src="img/white-divider.png" alt="Decoration"></div>
-						<p class="section-reviews__quote text-center">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+						<p class="section-reviews__quote text-center"><span>“</span>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
 						<p class="section-reviews__cite">- food inc, New York</p>
 					</div>
 				</div>
@@ -212,25 +213,37 @@
 		<section class="section-reservation" id="reservations">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<div class="reservation__dish-images">
-							<img src="img/main-course.png" alt="main-course" class="dish-img">
+							<img src="img/main-course.png" alt="main-course" class="dish-img mr30">
 							<img src="img/dessert.png" alt="dessert" class="dish-img">
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="reservation__block">
-							<div class="menu-block">
-								<h3 class="menu-block__title heading">Just the right food</h3>
-								<div class="menu-block__divider divider-image"><img src="img/menu_divider.png" alt="Decoration"></div>
-								<p class="text-description reservation-description">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.</p>
-								<p class="text-description reservation-description">Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
+					<div class="col-lg-5 mt75 ml50px">
+						<div class="reservation-block">
+							<div class="reservation-block__wrapper text-center">
+								<h3 class="reservation-block__title heading">Just the right food</h3>
+								<div class="reservation-block__divider divider-image"><img src="img/menu_divider.png" alt="Decoration"></div>
+								<p class="reservation-description">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.</p>
+								<p class="reservation-description">Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
 							</div>
-							<input type="text" placeholder="your name *">
-							<input type="email" placeholder="your email *">
-							<input type="date" placeholder="date *">
-							<input type="number" placeholder="party number *">
-							<button class="btn">Book now!</button>
+							<div class="reservation-block__form text-center">
+								<form action="action">
+									<div class="col-md-6">
+										<label for="username">Name</label>
+										<input type="text" name="username" placeholder="your name *" class="form-control">
+										<label for="date">Date</label>
+										<input type="datetime" name="date" placeholder="date *" class="form-control">
+									</div>
+									<div class="col-md-6">
+										<label for="email">Email</label>
+										<input type="email" name="email" placeholder="your email *" class="form-control">
+										<label for="email">Party number</label>
+										<input type="number" name="number" placeholder="party number" class="form-control">
+									</div>
+									<input type="submit" name="submit" class="submit-btn" value="Book now">
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
