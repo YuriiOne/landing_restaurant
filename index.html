@@ -35,18 +35,22 @@
 						</ul>
 					</div>
 				</nav>
-				
 				<nav class="nav-menu mobile__nav-menu">
-					<input type="checkbox" name="toggle" id="mob-menu" class="toggleMenu">
-					<label for="nav-menu" class="toggleMenu"><i class="fa fa-bars"></i></label>
 					<ul class="nav-menu__list">
 						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Home</a></li>
 						<li class="nav-menu__item"><a href="#about" class="nav-menu__link">About</a></li>
-						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Igredients</a></li>
-						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Menu</a></li>
-						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Reiews</a></li>
-						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Reservations</a></li>
+						<li class="nav-menu__item"><a href="#ingredients" class="nav-menu__link">Igredients</a></li>
+						<li class="nav-menu__item"><a href="#menu" class="nav-menu__link">Menu</a></li>
+						<li class="nav-menu__item"><a href="#reviews" class="nav-menu__link">Reiews</a></li>
+						<li class="nav-menu__item"><a href="#reservations" class="nav-menu__link">Reservations</a></li>
 					</ul>
+					<div class="top-header__social-icons social-icons">
+						<ul class="list-unstyled social">
+							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-youtube"></span></a></li>
+							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 			<div class="container">
@@ -232,14 +236,20 @@
 									<div class="col-md-6">
 										<label for="username">Name</label>
 										<input type="text" name="username" placeholder="your name *" class="form-control">
-										<label for="date">Date</label>
-										<input type="datetime" name="date" placeholder="date *" class="form-control">
+										<div class="input_wrapper">
+											<label for="date">Date</label>
+											<input type="datetime" name="date" placeholder="date *" class="form-control">
+											<i class="fa fa-calendar calendar-icon"></i>
+										</div>
 									</div>
 									<div class="col-md-6">
 										<label for="email">Email</label>
 										<input type="email" name="email" placeholder="your email *" class="form-control">
-										<label for="email">Party number</label>
-										<input type="number" name="number" placeholder="party number" class="form-control">
+										<div class="input_wrapper">
+											<label for="email">Party number</label>
+											<input type="number" name="number" placeholder="party number" class="form-control">
+											<i class="fa fa-caret-down"></i>
+										</div>
 									</div>
 									<input type="submit" name="submit" class="submit-btn" value="Book now">
 								</form>
