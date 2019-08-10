@@ -274,7 +274,6 @@ li.ingredients__list-item {
 .section-reviews__quote span{
 	font-size: 96px;
     font-family: Georgia;
-    padding-top: -6px;
     position: absolute;
     left: 40px;
     top: 5px;
@@ -293,9 +292,10 @@ li.ingredients__list-item {
 	background-repeat: no-repeat;
     background-size: cover;
 }
-.reservation__dish-images{
-	margin: 100px 0;
-	margin-left: -30px;
+.reservation__dish-images {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
 }
 .reservation-block__title{
 	padding-bottom: 5px;
@@ -371,4 +371,59 @@ footer li{
 }
 p.footer__text{
 	padding: 0 8px;
+}
+/**  @media  min-width  **/
+
+@media (min-width: 768px) {
+	.about_image-dish .dish-img {
+    	margin-top: 100px;
+}
+}
+@media (min-width: 991px) {
+	.about_image-dish .dish-img {
+    	margin-top: 0;
+}
+}
+/**  @media  max-width  **/
+@media (max-width: 1199px) {
+	.ml50px {
+    	margin-left: 0;
+}
+	.mt75 {
+    margin-top: 50px;
+}
+}
+@media (max-width: 991px) {
+	.menu-block {
+    	margin: 20px;
+}
+	.reservation__dish-images {
+    	margin: 50px 0;
+}
+}
+@media (max-width: 767px) {
+	.section-ingredients__wrapper {
+    	background-size: contain;
+    	padding: 20px;
+    	margin: 0;
+}
+	.section-reviews__wrapper {
+    	margin: 0;
+    	padding: 20px 0;
+}
+	.section-reviews__quote {
+    	line-height: 30px;
+    	font-size: 20px;
+    	padding: 0 20px 30px 20px;
+}
+	.section-reviews__quote span {
+    	font-size: 50px;
+    	left: 15px;
+}
+	.reservation__dish-images {
+    	display: none;
+}
+	.section-about{
+		padding: 0;
+	}
 }
