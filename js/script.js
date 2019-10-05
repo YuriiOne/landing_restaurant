@@ -9,11 +9,21 @@
 showMyMenu();
 
 */
-let buttonMenu = document.querySelector('.navbar-toggle');
-let menuToggle = document.querySelector('nav.nav-menu');
-console.log(buttonMenu);
-console.log(menuToggle);
-buttonMenu.addEventListener('click', ()=>{
-menuToggle.classList.toggle('active-out')
-console.log('okey');
-});
+document.addEventListener('DOMContentLoaded',()=>{
+	console.log('ContentLoaded')
+	let buttonMenu = document.querySelector('.navbar-toggle');
+	let menuToggle = document.querySelector('nav.nav-menu');
+	console.log(buttonMenu);
+	console.log(menuToggle);
+	buttonMenu.addEventListener('click', ()=>{
+		menuToggle.classList.toggle('active-out')
+		console.log('okey');
+	});
+	function closeOnClick (){
+		menuToggle.addEventListener('click',()=>{
+			menuToggle.classList.remove('active-out')
+			console.log('class removed')
+		})
+	}
+	closeOnClick()
+})
