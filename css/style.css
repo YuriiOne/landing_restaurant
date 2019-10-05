@@ -151,6 +151,25 @@ li a {
       -ms-flex-align: center;
           align-items: center;
 }
+.burger-bar{
+  border-bottom: 3px solid white;
+  margin-bottom:10px;
+  display: block;
+  content: ' ';
+  width: 30px;
+}
+.my-navbar .toggle{
+  display: none;
+}
+button.toggle{
+  background: transparent;
+}
+button.toggle:hover{
+  cursor: pointer;
+}
+*{
+  transition: 0.5s linear ;
+}
 /*.nav-menu.top-header__nav-menu {
   margin-right: 50px;
 }*/
@@ -437,6 +456,25 @@ footer li {
 p.footer__text {
   padding: 0 8px;
 }
+#go-top {
+  position: fixed; 
+  bottom: 25px; 
+  right: 30px;
+  text-align: center;
+  cursor:pointer; 
+  display:none;
+  width: 120px;
+  height: 30px;
+  background: rgba(0,0,0, .8);
+  line-height: 30px;
+  border-radius: 5px;
+  color: #f3eeef;
+}
+
+#go-top:hover {
+  background: #333;
+}
+
 /**  @media  min-width  **/
 
 @media (min-width: 768px) {
@@ -465,6 +503,46 @@ p.footer__text {
   .menu-block {
     margin: 20px;
   }
+  .navbar-toggle {
+    position: relative;
+    float: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+  }
+  .my-navbar {
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    right: 0;
+    height: 50px;
+    left: 0;
+    padding: 15px 15px;
+    z-index: 2;
+}
+.my-navbar .toggle{
+  display: block;
+}
+.nav-menu.top-header__nav-menu{
+      background: rgba(0,0,0, .8);
+      flex-direction: column;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      padding-top: 40px;
+      width: 100%;
+      transform: translateY(-400px);
+}
+.nav-menu.active-out{
+  transform: translateY(0);
+}
   .reservation__dish-images {
     margin: 50px 0;
   }
@@ -555,67 +633,3 @@ p.footer__text {
     padding-top: 30px;
   }
 }
-
-
-.burger-bar{
-  border-bottom: 3px solid white;
-  margin-bottom:10px;
-  display: block;
-  content: ' ';
-  width: 30px;
-}
-.my-navbar .toggle{
-  display: none;
-}
-button.toggle{
-  background: transparent;
-}
-button.toggle:hover{
-  cursor: pointer;
-}
-*{
-  transition: 0.5s linear ;
-}
-@media (max-width: 991px){
-  .navbar-toggle {
-    position: relative;
-    float: none;
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-    background-image: none;
-    border: none;
-    border-radius: 0;
-  }
-  .my-navbar {
-    position: fixed;
-    top: 0;
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-    right: 0;
-    height: 50px;
-    left: 0;
-    padding: 15px 15px;
-    z-index: 2;
-}
-.my-navbar .toggle{
-  display: block;
-}
-.nav-menu.top-header__nav-menu{
-      background: rgba(0,0,0, .8);
-      flex-direction: column;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 1;
-      padding-top: 40px;
-      width: 100%;
-      transform: translateY(-400px);
-}
-.nav-menu.active-out{
-  transform: translateY(0);
-}
-}
-
